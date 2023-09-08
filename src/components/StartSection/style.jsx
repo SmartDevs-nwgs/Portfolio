@@ -23,6 +23,9 @@ export const StyledStartSection = styled.div`
     z-index: -1;
   }
   .background-grey {
+    left: -12px;
+    bottom: 0;
+    transform: rotate3d(0, 0, -10, 15deg);
     animation: showBg 5s alternate ease-in-out;
   }
 
