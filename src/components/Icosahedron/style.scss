@@ -18,6 +18,7 @@ $vshift2: $sideheight + $triheight - $vshift;
   height: $triwidth * 2;
   animation: spin 60s infinite linear;
   transform-style: preserve-3d;
+  margin-top: 48px;
 
   .side {
     position: absolute;
@@ -35,7 +36,7 @@ $vshift2: $sideheight + $triheight - $vshift;
     $vshift2: $vshift;
     .side:nth-child(#{$i}) {
       transform: translateY($vshift2) rotateY(#{$i * 72deg}) rotateX($tilt);
-      border-bottom-color: #{rgba(0, 0, 0, 0.2)};
+      border-bottom-color: #{rgba(0, 0, 0, 0.1)};
     }
   }
   @for $i from 6 through 10 {
@@ -44,7 +45,7 @@ $vshift2: $sideheight + $triheight - $vshift;
       transform: translateY($vshift2)
         rotateY(#{$i * 72deg + 36deg})
         rotateX(#{180deg - $tilt});
-      border-bottom-color: #{rgba(0, 0, 0, 0.2)};
+      border-bottom-color: #{rgba(0, 0, 0, 0.1)};
     }
   }
   @for $i from 11 through 15 {
@@ -54,7 +55,7 @@ $vshift2: $sideheight + $triheight - $vshift;
         rotateY(#{$i * 72deg + 36deg})
         translateZ($outerradius)
         rotateX(-$sidetilt);
-      border-bottom-color: #{rgba(0, 0, 0, 0.2)};
+      border-bottom-color: #{rgba(0, 0, 0, 0.1)};
     }
   }
   @for $i from 16 through 20 {
@@ -65,7 +66,7 @@ $vshift2: $sideheight + $triheight - $vshift;
         rotateZ(180deg)
         translateZ($outerradius)
         rotateX(-$sidetilt);
-      border-bottom-color: #{rgba(0, 0, 0, 0.2)};
+      border-bottom-color: #{rgba(0, 0, 0, 0.1)};
     }
   }
 }

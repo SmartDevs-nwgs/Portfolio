@@ -2,28 +2,29 @@ import { styled } from 'styled-components'
 import smartPhone from '../../assets/images/smart-phone.png'
 
 export const StyledTextPhone = styled.div`
-  .container {
+  .phone-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-image: url('/smart-phone.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 200px;
+    width: 185px;
     height: 300px;
     .text {
-      width: 150px;
-      height: 230px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
       text-align: center;
       position: absolute;
+      gap: 20px;
       left: 17px;
+      bottom: 50px;
       color: black;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .txt {
+        width: 150px;
+      }
       h2 {
         width: 95%;
         font-size: 20px;

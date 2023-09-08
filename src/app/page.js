@@ -1,10 +1,10 @@
 'use client'
-import StartSection from '@/components/StartSection'
+import TopContent from '@/components/TopContent'
 
 export default function Home() {
   return (
     <>
-      <StartSection />
+      <TopContent />
     </>
   )
 }
