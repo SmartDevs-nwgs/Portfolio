@@ -10,36 +10,44 @@ export const StyledTextPhone = styled.div`
     background-image: url('/smart-phone.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 185px;
-    height: 300px;
+    width: 277.5px;
+    height: 450px;
     .text {
       text-align: center;
       position: absolute;
+      height: 230px;
       gap: 20px;
-      left: 17px;
+      left: 25px;
       bottom: 50px;
-      color: black;
+      color: var(--black);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       .txt {
-        width: 150px;
+        width: 225px;
       }
       h2 {
         width: 95%;
-        font-size: 20px;
+        font-size: 26px;
       }
       .black-window {
-        color: white;
-        background-color: black;
+        color: var(--white);
+        background-color: var(--black);
       }
       button {
         border: none;
         cursor: pointer;
-        padding: 8px 18px 8px 18px;
+        padding: 8px 30px 8px 30px;
         color: white;
         background-color: black;
         border-radius: 5px;
+        transition: box-shadow 0.3s;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      button:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: #dcdcdc;
+        background-color: #778899;
       }
     }
   }

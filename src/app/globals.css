@@ -3,6 +3,8 @@
   --dark: #898989;
   --white: #ffff;
   --black: #000000;
+  --background: #eeeeee;
+  --card: #e6e6e6;
 
   --base-size: 200px;
   --base-height: 173px;
@@ -14,4 +16,7 @@
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
+}
+html {
+  background-color: var(--background);
 }

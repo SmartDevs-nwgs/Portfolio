@@ -1,4 +1,4 @@
-$triwidth: 15px;
+$triwidth: 25px;
 
 $sqrt3: 1.732;
 $tilt: 52.62deg; // asin(tan(54deg)/sqrt(3))
@@ -16,9 +16,9 @@ $vshift2: $sideheight + $triheight - $vshift;
   position: relative;
   width: $triwidth * 2;
   height: $triwidth * 2;
-  animation: spin 60s infinite linear;
+  animation: spin 50s infinite linear;
   transform-style: preserve-3d;
-  margin-top: 48px;
+  margin-top: 80px;
 
   .side {
     position: absolute;

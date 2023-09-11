@@ -10,13 +10,14 @@ export const StyledStartSection = styled.div`
     position: relative;
     display: flex;
     align-items: center;
+    left: 300px;
   }
 
   .background-grey,
   .background-black {
     position: absolute;
     width: 80px;
-    height: 280px;
+    height: 400px;
     border-radius: 30px;
     background-color: var(--grey);
     transform: rotate3d(0, 0, -10, 15deg);
