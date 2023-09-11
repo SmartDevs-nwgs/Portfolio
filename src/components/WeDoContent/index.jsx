@@ -2,7 +2,9 @@ import { StyledWeDoContent } from './style'
 const WeDoContent = () => {
   return (
     <StyledWeDoContent>
-      <div></div>
+      <div>
+        <h1>what we do </h1>
+      </div>
     </StyledWeDoContent>
   )
 }

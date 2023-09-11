@@ -6,25 +6,18 @@ import Image from 'next/image'
 import logo from '../../assets/images/logo.png'
 import { useState } from 'react'
 
-const TopContent = () => {
-  const [showAnimation, setShowAnimation] = useState(false)
-
+const TopContent = ({ showAnimation, setShowAnimation }) => {
   return (
-    <StyledTopContent>
-      <div className="container">
-        <Image
-          src={logo}
-          alt="logo"
-          className="logo"
-          onClick={() => {
-            setShowAnimation(false)
-          }}
-        />
-        <StartSection />
-        <LeftContent setShowAnimation={setShowAnimation} />
-        {showAnimation ? <AnimatedScreen /> : null}
-      </div>
-    </StyledTopContent>
+    <div>
+      <StyledTopContent>
+        <div className="container">
+          <Image src={logo} alt="logo" className="logo" />
+          <StartSection />
+          <LeftContent setShowAnimation={setShowAnimation} />
+        </div>
+      </StyledTopContent>
+      {/* {showAnimation && <AnimatedScreen />} */}
+    </div>
   )
 }
 
