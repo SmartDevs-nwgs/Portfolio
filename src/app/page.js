@@ -1,7 +1,6 @@
 'use client'
 import TopContent from '@/components/TopContent'
 import AnimatedScreen from '@/components/AnimatedScreen'
-import WeDoContent from '@/components/WeDoContent'
 import { useState } from 'react'
 
 export default function Home() {
@@ -9,15 +8,13 @@ export default function Home() {
 
   return (
     <>
-      {showAnimation && <AnimatedScreen />}
+      {showAnimation && <AnimatedScreen showAnimation={showAnimation} />}
       {!showAnimation && (
         <TopContent
           showAnimation={showAnimation}
           setShowAnimation={setShowAnimation}
         />
       )}
-
-      {/* <WeDoContent /> */}
     </>
   )
 }

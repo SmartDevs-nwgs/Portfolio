@@ -4,7 +4,7 @@ import { TweenMax, Power1, gsap } from 'gsap'
 import { StyledAnimatedScreen } from './style'
 import WeDoContent from '../WeDoContent'
 
-const AnimatedScreen = () => {
+const AnimatedScreen = ({ showAnimation }) => {
   let renderer, scene, camera, geometry, material
   const cubes = []
   const cubeSpeed = 0.2
@@ -29,7 +29,7 @@ const AnimatedScreen = () => {
 
     geometry = new THREE.BoxGeometry(12, 12, 3)
     material = new THREE.MeshLambertMaterial({
-      color: '#778899',
+      color: '#ffffff',
       transparent: false,
       opacity: 1,
     })
@@ -63,17 +63,24 @@ const AnimatedScreen = () => {
       const rz = Math.random() * 2 * Math.PI
       gsap.to(cube.rotation, 2, { x: rx, y: ry, z: rz, delay })
       gsap.to(cube.position, 2, {
-        z: 80,
+        z: 100,
         delay: delay + 0.5,
         ease: Power1.easeOut,
       })
-      gsap.to(cube.material, 2, { opacity: 0, delay: delay + 0.5 })
+      gsap.to(cube.material, 2, {
+        opacity: 0,
+        delay: delay + 0.5,
+      })
     })
   }
 
   function animate() {
     requestAnimationFrame(animate)
     renderer.render(scene, camera)
+  }
+
+  function hideCanvas() {
+    renderer.domElement.remove()
   }
 
   window.addEventListener('resize', onResize)
@@ -86,9 +93,13 @@ const AnimatedScreen = () => {
     renderer.setSize(newWidth, newHeight)
   }
 
+  setTimeout(() => {
+    hideCanvas()
+  }, 4000)
+
   return (
     <StyledAnimatedScreen>
-      <WeDoContent />
+      <WeDoContent showAnimation={showAnimation} />
     </StyledAnimatedScreen>
   )
 }
