@@ -1,6 +1,7 @@
 'use client'
 import TopContent from '@/components/TopContent'
 import AnimatedScreen from '@/components/AnimatedScreen'
+import AboutUs from '@/components/AboutUs'
 import { useState } from 'react'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           setShowAnimation={setShowAnimation}
         />
       )}
+      {showAnimation && <AboutUs />}
     </>
   )
 }
