@@ -2,6 +2,7 @@
 import TopContent from '@/components/TopContent'
 import AnimatedScreen from '@/components/AnimatedScreen'
 import AboutUs from '@/components/AboutUs'
+import ContactUs from '@/components/ContactUs'
 import { useState } from 'react'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         />
       )}
       {showAnimation && <AboutUs />}
+      {showAnimation && <ContactUs />}
     </>
   )
 }
