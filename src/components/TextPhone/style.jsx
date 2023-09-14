@@ -51,4 +51,7 @@ export const StyledTextPhone = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 350px) {
+  }
 `

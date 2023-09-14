@@ -9,7 +9,10 @@ import web from '../../assets/images/web.png'
 import pc from '../../assets/images/pc.png'
 import nodeImg from '../../assets/images/node.png'
 import Image from 'next/image'
+import useWidthPosition from '@/hooks/useWidth'
 const WeDoContent = ({ showAnimation }) => {
+  const screenWidth = useWidthPosition()
+
   const whatWeDo = [
     {
       img: nodeImg,
@@ -75,7 +78,7 @@ const WeDoContent = ({ showAnimation }) => {
                     }
                   />
                   <h1>{card.title}</h1>
-                  <p>{card.text}</p>
+                  {screenWidth > 850 && <p>{card.text}</p>}
                 </div>
               )
             })}

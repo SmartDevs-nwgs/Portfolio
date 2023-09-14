@@ -7,9 +7,12 @@ import {
   AiOutlinePhone,
   AiOutlineClockCircle,
 } from 'react-icons/ai'
+import useWidthPosition from '@/hooks/useWidth'
 
 const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false)
+
+  const screenWidth = useWidthPosition()
 
   setTimeout(() => {
     setIsVisible(true)
@@ -19,6 +22,9 @@ const ContactUs = () => {
     isVisible && (
       <StyledContactUs>
         <div className="container">
+          <div className="block">
+            <h2>4</h2>
+          </div>
           <div className="contact-us">
             <Image src={contact} alt="circle" />
             <h3>TALK WITH US</h3>
@@ -29,8 +35,14 @@ const ContactUs = () => {
               <form action="" className="message-box">
                 <h2>FEEL FREE TO SEND US A MESSAGE ANYTIME</h2>
                 <div className="names">
-                  <input type="text" placeholder="FIRST NAME" />
-                  <input type="text" placeholder="LAST NAME" />
+                  {screenWidth > 800 ? (
+                    <input type="text" placeholder="FIRST NAME" />
+                  ) : (
+                    <input type="text" placeholder="NAME" />
+                  )}
+                  {screenWidth > 800 && (
+                    <input type="text" placeholder="LAST NAME" />
+                  )}
                 </div>
                 <input type="email" placeholder="E-MAIL" />
                 <textarea
