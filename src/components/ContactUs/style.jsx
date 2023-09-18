@@ -10,6 +10,37 @@ export const StyledContactUs = styled.div`
   height: 100%;
   z-index: 1000;
   overflow: hidden;
+  .error {
+    width: 100%;
+    height: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+  }
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
   .container {
     width: 100%;
@@ -46,6 +77,7 @@ export const StyledContactUs = styled.div`
         background-color: var(--white);
         border-radius: 20px;
         padding: 30px;
+        text-align: center;
         .message-box {
           display: flex;
           flex-direction: column;
@@ -139,6 +171,12 @@ export const StyledContactUs = styled.div`
   }
 
   @media screen and (min-width: 350px) {
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
     .container {
       .content {
         flex-direction: column;

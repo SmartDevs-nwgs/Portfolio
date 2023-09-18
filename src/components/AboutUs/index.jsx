@@ -9,7 +9,7 @@ const AboutUs = () => {
 
   setTimeout(() => {
     setIsVisible(true)
-  }, 7000)
+  }, 4000)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +41,9 @@ const AboutUs = () => {
                 ))}
               </div>
               <div className="bottom-content">
-                <button>CONTACT US NOW</button>
+                <a href="https://wa.me/5544991053179" target="_blank">
+                  <button onClick={() => {}}>CONTACT US NOW</button>
+                </a>
               </div>
             </div>
             <div className="info">
