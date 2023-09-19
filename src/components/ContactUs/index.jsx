@@ -16,6 +16,7 @@ const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [currentError, setCurrentError] = useState(null)
   const [loadingSubmit, setLoadingSubmit] = useState(false)
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const screenWidth = useWidthPosition()
   const [formData, setFormData] = useState({
     name: '',
@@ -62,6 +63,10 @@ const ContactUs = () => {
         .then((response) => {
           setCurrentError(null)
           console.log('enviado', response.status, response.text)
+          setShowSuccessMessage(true)
+          setTimeout(() => {
+            setShowSuccessMessage(false)
+          }, 2000)
           setLoadingSubmit(false)
           setFormData({
             name: '',
@@ -88,6 +93,11 @@ const ContactUs = () => {
     isVisible && (
       <StyledContactUs>
         <div className="container">
+          {showSuccessMessage && (
+            <div className="success-message">
+              <p>Email enviado com sucesso!</p>
+            </div>
+          )}
           <div className="block">
             <h2>4</h2>
           </div>

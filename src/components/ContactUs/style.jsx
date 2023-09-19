@@ -10,6 +10,27 @@ export const StyledContactUs = styled.div`
   height: 100%;
   z-index: 1000;
   overflow: hidden;
+  .success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50; /* Cor de fundo verde (você pode personalizar) */
+    color: white; /* Cor do texto */
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Para garantir que a mensagem esteja acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .success-message p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
   .error {
     width: 100%;
     height: 10px;
@@ -171,6 +192,28 @@ export const StyledContactUs = styled.div`
   }
 
   @media screen and (min-width: 350px) {
+    .success-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #4caf50; /* Cor de fundo verde (você pode personalizar) */
+      color: white; /* Cor do texto */
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 9999; /* Para garantir que a mensagem esteja acima de outros elementos */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .success-message p {
+      text-align: center;
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
     .loading-spinner {
       display: flex;
       justify-content: center;
@@ -357,5 +400,26 @@ export const StyledContactUs = styled.div`
         }
       }
     }
+  }
+  .success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50; /* Cor de fundo verde (você pode personalizar) */
+    color: white; /* Cor do texto */
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Para garantir que a mensagem esteja acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .success-message p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
   }
 `
