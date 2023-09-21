@@ -107,7 +107,7 @@ export const StyledContactUs = styled.div`
             display: flex;
             justify-content: space-between;
             input {
-              border-bottom: 1px solid black;
+              border-bottom: 1px solid var(--grey);
             }
           }
           h2 {
@@ -120,12 +120,12 @@ export const StyledContactUs = styled.div`
             margin: 0;
             outline: 0;
             border-style: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid var(--grey);
           }
           input::placeholder,
           textarea::placeholder {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 16px;
           }
           textarea {
             border: 1px solid var(--card);
@@ -237,6 +237,7 @@ export const StyledContactUs = styled.div`
               font-size: 14px;
             }
             button {
+              width: 100%;
               font-size: 14px;
               padding: 10px 10px 10px 10px;
             }
@@ -323,7 +324,7 @@ export const StyledContactUs = styled.div`
               display: flex;
               justify-content: space-between;
               input {
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid var(--grey);
               }
             }
             h2 {
@@ -336,7 +337,7 @@ export const StyledContactUs = styled.div`
               margin: 0;
               outline: 0;
               border-style: none;
-              border-bottom: 1px solid black;
+              border-bottom: 1px solid var(--grey);
             }
             input::placeholder,
             textarea::placeholder {
@@ -344,14 +345,17 @@ export const StyledContactUs = styled.div`
               font-size: 14px;
             }
             textarea {
-              border: 1px solid var(--card);
+              border-bottom: 1px solid var(--card);
+            }
+            textarea::placeholder {
+              font-size: 16px;
             }
             button {
               cursor: pointer;
               font-size: 20px;
               font-weight: bold;
               border: none;
-              width: 80%;
+              width: 100%;
               padding: 15px;
               background-color: var(--smart);
               color: var(--white);

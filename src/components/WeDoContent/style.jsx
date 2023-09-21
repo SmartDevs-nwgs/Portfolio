@@ -13,19 +13,23 @@ export const StyledWeDoContent = styled.div`
     justify-content: space-around;
 
     .block {
-      margin-left: 0;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      .stars {
+        margin: 0;
+      }
       h2 {
+        margin: 0;
         text-align: center;
         width: 69px;
+        height: 69px;
         background-color: var(--black);
         padding: 20px;
         color: white;
       }
     }
     .stars {
-      position: absolute;
-      top: 0;
-      right: 0;
     }
     .center {
       text-align: center;
@@ -50,7 +54,7 @@ export const StyledWeDoContent = styled.div`
         background-color: var(--card);
       }
       .card:hover {
-        background-color: var(--dark);
+        border: 1px solid var(--dark);
       }
     }
   }
@@ -58,13 +62,42 @@ export const StyledWeDoContent = styled.div`
   @media screen and (min-width: 350px) {
     .container {
       .content {
-        gap: 5px;
+        gap: 15px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
         .card {
-          width: 130px;
+          width: 180px;
+          padding: 20px;
+          border-radius: 15px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .card-img {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 5px;
+          }
+
           h1 {
-            font-size: 12px;
+            font-size: 14px;
+          }
+          background-color: var(--card);
+        }
+        .card:hover {
+          transform: scale(1);
+          cursor: pointer;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          border: 1px solid var(--grey);
+          .card-img {
+            background-color: var(--smart);
           }
         }
       }
@@ -77,7 +110,39 @@ export const StyledWeDoContent = styled.div`
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
         .card {
-          width: 200px;
+          width: 250px;
+          padding: 20px;
+          border-radius: 15px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .card-img {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 5px;
+          }
+
+          h1 {
+            font-size: 22px;
+          }
+          background-color: var(--card);
+        }
+        .card:hover {
+          transform: scale(1.05);
+          cursor: pointer;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          border: 1px solid var(--grey);
+          .card-img {
+            background-color: var(--smart);
+          }
         }
       }
     }
@@ -106,9 +171,6 @@ export const StyledWeDoContent = styled.div`
         }
       }
       .stars {
-        position: absolute;
-        top: 0;
-        right: 0;
       }
       .center {
         text-align: center;
@@ -127,13 +189,32 @@ export const StyledWeDoContent = styled.div`
           display: flex;
           flex-direction: column;
           gap: 15px;
+
+          .card-img {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 5px;
+          }
+
           h1 {
             font-size: 22px;
           }
           background-color: var(--card);
         }
         .card:hover {
-          background-color: var(--dark);
+          transform: scale(1.05);
+          cursor: pointer;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          border: 1px solid var(--grey);
+          .card-img {
+            background-color: var(--smart);
+          }
         }
       }
     }

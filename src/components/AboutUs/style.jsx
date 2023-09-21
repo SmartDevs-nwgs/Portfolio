@@ -100,15 +100,15 @@ export const StyledAboutUs = styled.div`
           display: flex;
           flex-direction: column;
           height: 100%;
-          justify-content: space-around;
+          justify-content: space-between;
           text-align: start;
           span {
             font-weight: bold;
-            color: var(--black);
           }
-          h3 {
+          p {
+            font-weight: light;
             margin-left: 0;
-            color: var(--dark);
+            /* color: var(--dark); */
           }
         }
       }
@@ -162,12 +162,18 @@ export const StyledAboutUs = styled.div`
             h1 {
               font-size: 14px;
             }
-            h3 {
+            p {
               font-size: 12px;
             }
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .text {
+      width: 70%;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -257,7 +263,7 @@ export const StyledAboutUs = styled.div`
           flex-direction: column;
           align-items: start;
           justify-content: start;
-          width: 50%;
+          width: 70%;
           height: 100%;
           padding-left: 80px;
           padding-right: 100px;
@@ -274,22 +280,25 @@ export const StyledAboutUs = styled.div`
             }
           }
           .text {
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             text-align: start;
-            height: 80%;
+            margin: 0;
+            height: 70%;
             span {
               font-weight: bold;
               color: var(--black);
             }
             h1 {
-              font-size: 24px;
+              font-size: 28px;
             }
-            h3 {
-              font-size: 20px;
+            p {
+              font-size: 26px;
+              font-weight: light;
               margin-left: 0;
-              color: var(--dark);
+              /* color: var(--dark); */
             }
           }
         }

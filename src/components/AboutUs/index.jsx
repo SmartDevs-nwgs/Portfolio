@@ -43,7 +43,7 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="info">
-            {screenWidth > 600 ? (
+            {screenWidth > 1200 ? (
               <div className="block">
                 <h2>3</h2>
               </div>
@@ -53,16 +53,16 @@ const AboutUs = () => {
                 Our company was born with the aim of democratizing quality
                 technology, bringing the best in the market to companies.
               </h1>
-              <h3>
+              <p>
                 The <span>Smart devs</span> development agency is a company
                 focused on solving digital problems, working on the development
                 of systems that meet the real needs of a company.
-              </h3>
-              <h3>
+              </p>
+              <p>
                 Our mission is the commitment to our customers and the delivery
                 of a quality service.
-              </h3>
-              <h3>There is a problem? We can solve</h3>
+              </p>
+              <p>There is a problem? We can solve</p>
             </div>
           </div>
         </div>

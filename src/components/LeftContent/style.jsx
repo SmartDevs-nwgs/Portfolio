@@ -10,6 +10,10 @@ export const StyledLeftContent = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
+  .icon:hover {
+    transform: scale(1.1);
+  }
+
   .social {
     width: 200px;
     a {

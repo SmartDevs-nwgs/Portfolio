@@ -93,7 +93,7 @@ const ContactUs = () => {
             <p>Email enviado com sucesso!</p>
           </div>
         )}
-        {screenWidth > 600 ? (
+        {screenWidth > 1200 ? (
           <div className="block">
             <h2>4</h2>
           </div>

@@ -26,7 +26,7 @@ const LeftContent = ({ setShowAnimation }) => {
           rel="noreferrer"
         >
           {' '}
-          <AiOutlineInstagram />
+          <AiOutlineInstagram className="icon" />
         </a>
         <a
           href="https://www.linkedin.com/company/smart-devs-br/"
@@ -34,7 +34,7 @@ const LeftContent = ({ setShowAnimation }) => {
           rel="noreferrer"
         >
           {' '}
-          <AiOutlineLinkedin />
+          <AiOutlineLinkedin className="icon" />
         </a>
       </div>
     </StyledLeftContent>
