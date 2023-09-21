@@ -5,9 +5,21 @@ import {
   AiOutlineLinkedin,
 } from 'react-icons/ai'
 import useScrollPosition from '@/hooks/scroll'
+import useWidthPosition from '@/hooks/useWidth'
+import { useRef } from 'react'
 
-const LeftContent = ({ setShowAnimation }) => {
-  const scrollSize = useScrollPosition()
+const LeftContent = ({ scrollRef }) => {
+  const scrollPosition = useScrollPosition()
+  const screenWidth = useWidthPosition()
+
+  const scrollToElement = (element) => {
+    const elementPosition = element.getBoundingClientRect().top
+
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <StyledLeftContent>
@@ -16,7 +28,14 @@ const LeftContent = ({ setShowAnimation }) => {
         <div className="start">
           <span className="line"></span>
           <p>Lets start?</p>
-          <AiFillPlayCircle />
+          <AiFillPlayCircle
+            onClick={() => {
+              const weDoContentElement = scrollRef.current
+              if (weDoContentElement) {
+                scrollToElement(weDoContentElement)
+              }
+            }}
+          />
         </div>
       </div>
       <div className="social">

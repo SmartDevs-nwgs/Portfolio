@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { StyledWeDoContent } from './style'
 import stars from '../../assets/images/stars.png'
 import cube from '../../assets/images/cube.png'
@@ -16,8 +16,11 @@ import nodeImg from '../../assets/images/node.png'
 import whiteNodeImg from '../../assets/images/node-white.png'
 import Image from 'next/image'
 import useWidthPosition from '@/hooks/useWidth'
-const WeDoContent = ({ showAnimation }) => {
+import useScrollPosition from '@/hooks/scroll'
+
+const WeDoContent = ({ scrollRef }) => {
   const screenWidth = useWidthPosition()
+  const scrollPosition = useScrollPosition()
   const [hoveredCard, setHoveredCard] = useState(null)
 
   const possibleNodeImg = [nodeImg, whiteNodeImg]
@@ -69,7 +72,7 @@ const WeDoContent = ({ showAnimation }) => {
   ]
 
   return (
-    <StyledWeDoContent>
+    <StyledWeDoContent ref={scrollRef}>
       <div className="container">
         {screenWidth > 1200 ? (
           <div className="block">

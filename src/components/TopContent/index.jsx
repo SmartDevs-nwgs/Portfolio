@@ -7,7 +7,7 @@ import logo from '../../assets/images/logo.png'
 import useWidthPosition from '@/hooks/useWidth'
 import { useState } from 'react'
 
-const TopContent = ({ showAnimation, setShowAnimation }) => {
+const TopContent = ({ scrollRef }) => {
   const screenWidth = useWidthPosition()
 
   return (
@@ -16,7 +16,7 @@ const TopContent = ({ showAnimation, setShowAnimation }) => {
         <div className="container">
           <Image src={logo} alt="logo" className="logo" />
           {screenWidth > 500 ? <StartSection /> : null}
-          <LeftContent setShowAnimation={setShowAnimation} />
+          <LeftContent scrollRef={scrollRef} />
         </div>
       </StyledTopContent>
     </div>
