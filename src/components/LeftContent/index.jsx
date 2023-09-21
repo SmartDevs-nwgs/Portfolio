@@ -16,11 +16,7 @@ const LeftContent = ({ setShowAnimation }) => {
         <div className="start">
           <span className="line"></span>
           <p>Lets start?</p>
-          <AiFillPlayCircle
-            onClick={() => {
-              setShowAnimation(true)
-            }}
-          />
+          <AiFillPlayCircle />
         </div>
       </div>
       <div className="social">

@@ -51,40 +51,40 @@ const WeDoContent = ({ showAnimation }) => {
 
   return (
     <StyledWeDoContent>
-      {showAnimation && (
-        <div className="container">
+      <div className="container">
+        {screenWidth > 600 ? (
           <div className="block">
             <h2>2</h2>
           </div>
-          <div className="stars">
-            <Image src={stars} alt="stars" />
-          </div>
-          <div className="center">
-            <Image src={cube} alt="cube" />
-            <h2>WHAT WE DO</h2>
-            <h1>OUR SERVICES</h1>
-          </div>
-          <div className="content">
-            {whatWeDo.map((card, index) => {
-              return (
-                <div key={index} className="card">
-                  <Image
-                    src={card.img}
-                    alt={card.img}
-                    style={
-                      index === 1
-                        ? { backgroundColor: '#808080', borderRadius: '10px' }
-                        : null
-                    }
-                  />
-                  <h1>{card.title}</h1>
-                  {screenWidth > 850 && <p>{card.text}</p>}
-                </div>
-              )
-            })}
-          </div>
+        ) : null}
+        <div className="stars">
+          <Image src={stars} alt="stars" />
         </div>
-      )}
+        <div className="center">
+          <Image src={cube} alt="cube" />
+          <h2>WHAT WE DO</h2>
+          <h1>OUR SERVICES</h1>
+        </div>
+        <div className="content">
+          {whatWeDo.map((card, index) => {
+            return (
+              <div key={index} className="card">
+                <Image
+                  src={card.img}
+                  alt={card.img}
+                  style={
+                    index === 1
+                      ? { backgroundColor: '#808080', borderRadius: '10px' }
+                      : null
+                  }
+                />
+                <h1>{card.title}</h1>
+                {screenWidth > 850 && <p>{card.text}</p>}
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </StyledWeDoContent>
   )
 }

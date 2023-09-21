@@ -3,9 +3,8 @@ import styled from 'styled-components'
 export const StyledWeDoContent = styled.div`
   z-index: 10;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
-  animation: init 6s alternate ease-in-out;
   .container {
     width: 100%;
     height: 100%;
@@ -14,9 +13,7 @@ export const StyledWeDoContent = styled.div`
     justify-content: space-around;
 
     .block {
-      position: absolute;
-      top: 0;
-      left: 0;
+      margin-left: 0;
       h2 {
         text-align: center;
         width: 69px;
@@ -88,7 +85,7 @@ export const StyledWeDoContent = styled.div`
   @media screen and (min-width: 1200px) {
     z-index: 10;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     animation: init 6s alternate ease-in-out;
     .container {
@@ -99,9 +96,7 @@ export const StyledWeDoContent = styled.div`
       justify-content: space-around;
 
       .block {
-        position: absolute;
-        top: 0;
-        left: 0;
+        margin-left: 0;
         h2 {
           text-align: center;
           width: 69px;
@@ -141,15 +136,6 @@ export const StyledWeDoContent = styled.div`
           background-color: var(--dark);
         }
       }
-    }
-  }
-
-  @keyframes init {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
 `

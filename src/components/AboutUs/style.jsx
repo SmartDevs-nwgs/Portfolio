@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledAboutUs = styled.div`
-  position: absolute;
   margin: 0;
   padding: 0;
-  bottom: -100%;
+  bottom: -200%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -88,7 +87,7 @@ export const StyledAboutUs = styled.div`
         padding-left: 80px;
         padding-right: 40px;
         .block {
-          margin: 0;
+          margin-left: 0;
           h2 {
             text-align: center;
             width: 69px;
@@ -146,13 +145,15 @@ export const StyledAboutUs = styled.div`
         }
         .info {
           width: 100%;
-          height: 230px;
           padding: 50px;
           .block {
-            position: absolute;
-            left: 0;
-            top: 0;
+            margin-left: 0;
             h2 {
+              text-align: center;
+              width: 69px;
+              background-color: var(--black);
+              padding: 20px;
+              color: white;
             }
           }
           .text {
@@ -170,13 +171,12 @@ export const StyledAboutUs = styled.div`
     }
   }
   @media screen and (min-width: 1200px) {
-    position: absolute;
     margin: 0;
     padding: 0;
     bottom: -100%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -264,7 +264,7 @@ export const StyledAboutUs = styled.div`
           order: 1;
           padding-top: 0;
           .block {
-            margin: 0;
+            margin-left: 0;
             h2 {
               text-align: center;
               width: 69px;

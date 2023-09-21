@@ -85,115 +85,111 @@ const ContactUs = () => {
     }
   }
 
-  setTimeout(() => {
-    setIsVisible(true)
-  }, 4000)
-
   return (
-    isVisible && (
-      <StyledContactUs>
-        <div className="container">
-          {showSuccessMessage && (
-            <div className="success-message">
-              <p>Email enviado com sucesso!</p>
-            </div>
-          )}
+    <StyledContactUs>
+      <div className="container">
+        {showSuccessMessage && (
+          <div className="success-message">
+            <p>Email enviado com sucesso!</p>
+          </div>
+        )}
+        {screenWidth > 600 ? (
           <div className="block">
             <h2>4</h2>
           </div>
-          <div className="contact-us">
-            <Image src={contact} alt="circle" />
-            <h3>TALK WITH US</h3>
-            <h2>CONTACT</h2>
+        ) : null}
+        <div className="contact-us">
+          <Image src={contact} alt="circle" />
+          <h3>TALK WITH US</h3>
+          <h2>CONTACT</h2>
+        </div>
+        <div className="content">
+          <div className="box">
+            {loadingSubmit ? (
+              <div className="loading-spinner">
+                <div className="spinner"></div>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="message-box">
+                <h2>FEEL FREE TO SEND US A MESSAGE ANYTIME</h2>
+                <div className="names">
+                  {screenWidth > 800 ? (
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="FIRST NAME"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                  ) : (
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="NAME"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                  )}
+                  {screenWidth > 800 && (
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="LAST NAME"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                    />
+                  )}
+                </div>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-MAIL"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+
+                <textarea
+                  type="text"
+                  rows="4"
+                  cols="50"
+                  aria-expanded="false"
+                  name="message"
+                  placeholder="MESSAGE"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                />
+
+                <button type="submit">SEND</button>
+              </form>
+            )}
+
+            {currentError && (
+              <div className="error-messages">
+                <p className="error">{currentError}</p>
+              </div>
+            )}
           </div>
-          <div className="content">
-            <div className="box">
-              {loadingSubmit ? (
-                <div className="loading-spinner">
-                  <div className="spinner"></div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="message-box">
-                  <h2>FEEL FREE TO SEND US A MESSAGE ANYTIME</h2>
-                  <div className="names">
-                    {screenWidth > 800 ? (
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="FIRST NAME"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    ) : (
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="NAME"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                      />
-                    )}
-                    {screenWidth > 800 && (
-                      <input
-                        type="text"
-                        name="lastName"
-                        placeholder="LAST NAME"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                      />
-                    )}
-                  </div>
-
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="E-MAIL"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                  />
-
-                  <textarea
-                    type="text"
-                    rows="4"
-                    cols="50"
-                    aria-expanded="false"
-                    name="message"
-                    placeholder="MESSAGE"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                  />
-
-                  <button type="submit">SEND</button>
-                </form>
-              )}
-
-              {currentError && (
-                <div className="error-messages">
-                  <p className="error">{currentError}</p>
-                </div>
-              )}
-            </div>
-            <div className="info">
-              <h2>INFO</h2>
-              <div className="content-info">
-                <div className="email">
-                  <AiOutlineMail />
-                  <h2>SMARTDEVNWGS@GMAIL.COM</h2>
-                </div>
-                <div className="phone">
-                  <AiOutlinePhone />
-                  <h2>+55 44 991053179</h2>
-                </div>
-                <div className="clock">
-                  <AiOutlineClockCircle />
-                  <h2>09:00 - 18:00</h2>
-                </div>
+          <div className="info">
+            <h2>INFO</h2>
+            <div className="content-info">
+              <div className="email">
+                <AiOutlineMail />
+                <h2>SMARTDEVNWGS@GMAIL.COM</h2>
+              </div>
+              <div className="phone">
+                <AiOutlinePhone />
+                <h2>+55 44 991053179</h2>
+              </div>
+              <div className="clock">
+                <AiOutlineClockCircle />
+                <h2>09:00 - 18:00</h2>
               </div>
             </div>
           </div>
         </div>
-      </StyledContactUs>
-    )
+      </div>
+    </StyledContactUs>
   )
 }
 

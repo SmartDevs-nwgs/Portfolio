@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledContactUs = styled.div`
-  position: absolute;
   margin: 0;
   padding: 0;
-  bottom: -200%;
+  bottom: -300%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
   overflow: hidden;
   .success-message {
@@ -70,9 +69,7 @@ export const StyledContactUs = styled.div`
     flex-direction: column;
     justify-content: space-around;
     .block {
-      position: absolute;
-      top: 0;
-      left: 0;
+      margin-left: 0;
       h2 {
         text-align: center;
         width: 69px;
@@ -221,17 +218,27 @@ export const StyledContactUs = styled.div`
       height: 50vh;
     }
     .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .contact-us {
+        margin-bottom: 20px;
+      }
       .content {
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: 10px;
         .box {
           width: 90%;
-          height: 320px;
+          height: 300px;
           .message-box {
             gap: 20px;
             h2 {
               font-size: 14px;
+            }
+            button {
+              font-size: 14px;
+              padding: 10px 10px 10px 10px;
             }
           }
         }
@@ -262,26 +269,23 @@ export const StyledContactUs = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    position: absolute;
     margin: 0;
     padding: 0;
-    bottom: -200%;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 1000;
     overflow: hidden;
 
     .container {
       width: 100%;
+      padding-bottom: 50px;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       .block {
-        position: absolute;
-        top: 0;
-        left: 0;
+        margin-left: 0;
+
         h2 {
           text-align: center;
           width: 69px;
@@ -362,6 +366,7 @@ export const StyledContactUs = styled.div`
         }
         .info {
           color: var(--white);
+
           display: flex;
           flex-direction: column;
           width: 35%;
