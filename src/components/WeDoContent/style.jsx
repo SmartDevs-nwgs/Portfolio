@@ -66,7 +66,7 @@ export const StyledWeDoContent = styled.div`
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
         .card {
-          width: 180px;
+          width: 160px;
           padding: 20px;
           border-radius: 15px;
           text-align: center;

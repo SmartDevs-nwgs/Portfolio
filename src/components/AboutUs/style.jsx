@@ -301,6 +301,7 @@ export const StyledAboutUs = styled.div`
             text-align: start;
             margin: 0;
             height: 70%;
+            margin-top: 15px;
             span {
               font-weight: bold;
               color: var(--black);
