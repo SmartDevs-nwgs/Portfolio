@@ -127,9 +127,6 @@ export const StyledContactUs = styled.div`
             font-weight: bold;
             font-size: 16px;
           }
-          textarea {
-            border: 1px solid var(--card);
-          }
           button {
             cursor: pointer;
             font-size: 20px;
@@ -240,6 +237,13 @@ export const StyledContactUs = styled.div`
               width: 100%;
               font-size: 14px;
               padding: 10px 10px 10px 10px;
+            }
+            textarea {
+              border-bottom: 1px solid var(--card);
+            }
+            textarea::placeholder {
+              font-weight: bold;
+              font-size: 18px;
             }
           }
         }

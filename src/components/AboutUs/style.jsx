@@ -126,6 +126,7 @@ export const StyledAboutUs = styled.div`
         height: 100%;
         .smart-devs {
           width: 70%;
+          height: 50%;
           order: 2;
           .top-content {
             border-top-left-radius: 20px;
@@ -146,6 +147,7 @@ export const StyledAboutUs = styled.div`
         .info {
           width: 100%;
           padding: 50px;
+          padding-top: 0;
           .block {
             margin-left: 0;
             h2 {
@@ -172,6 +174,17 @@ export const StyledAboutUs = styled.div`
   }
 
   @media screen and (min-width: 500px) {
+    .container {
+      .content {
+        .info {
+          padding-top: 0;
+        }
+        .smart-devs {
+          height: 50%;
+        }
+      }
+    }
+
     .text {
       width: 70%;
     }
@@ -209,6 +222,7 @@ export const StyledAboutUs = styled.div`
         .smart-devs {
           order: 1;
           width: 50%;
+          height: 100%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -263,7 +277,7 @@ export const StyledAboutUs = styled.div`
           flex-direction: column;
           align-items: start;
           justify-content: start;
-          width: 70%;
+          width: 50%;
           height: 100%;
           padding-left: 80px;
           padding-right: 100px;
@@ -295,7 +309,7 @@ export const StyledAboutUs = styled.div`
               font-size: 28px;
             }
             p {
-              font-size: 26px;
+              font-size: 24px;
               font-weight: light;
               margin-left: 0;
               /* color: var(--dark); */

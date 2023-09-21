@@ -189,6 +189,7 @@ export const StyledWeDoContent = styled.div`
           display: flex;
           flex-direction: column;
           gap: 15px;
+          transition: transform 1s linear;
 
           .card-img {
             display: flex;
