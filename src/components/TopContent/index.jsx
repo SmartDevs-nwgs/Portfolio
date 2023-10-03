@@ -15,7 +15,7 @@ const TopContent = ({ scrollRef }) => {
       <StyledTopContent>
         <div className="container">
           <Image src={logo} alt="logo" className="logo" />
-          {screenWidth > 500 ? <StartSection /> : null}
+          {screenWidth > 500 ? <StartSection scrollRef={scrollRef} /> : null}
           <LeftContent scrollRef={scrollRef} />
         </div>
       </StyledTopContent>

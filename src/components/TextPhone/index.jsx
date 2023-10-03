@@ -1,7 +1,16 @@
 import { StyledTextPhone } from './style'
 import IcosahedronComponent from '../Icosahedron'
 
-const TextPhone = () => {
+const TextPhone = ({ scrollRef }) => {
+  const scrollToElement = (element) => {
+    const elementPosition = element.getBoundingClientRect().top
+
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <StyledTextPhone>
       <div className="phone-content">
@@ -14,7 +23,16 @@ const TextPhone = () => {
             <h2>CODE FORM</h2>
           </div>
           <div className="button">
-            <button>ENJOY</button>
+            <button
+              onClick={() => {
+                const weDoContentElement = scrollRef.current
+                if (weDoContentElement) {
+                  scrollToElement(weDoContentElement)
+                }
+              }}
+            >
+              ENJOY
+            </button>
           </div>
         </div>
       </div>

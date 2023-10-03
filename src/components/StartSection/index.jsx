@@ -3,12 +3,12 @@ import AnimatedPhone from '../AnimatedPhone'
 import BlackOne from '../BlackOne'
 import { StyledStartSection } from './style'
 
-const StartSection = () => {
+const StartSection = ({ scrollRef }) => {
   return (
     <StyledStartSection>
       <div className="content">
         <BlackOne />
-        <AnimatedPhone />
+        <AnimatedPhone scrollRef={scrollRef} />
         <span className="background-grey" />
         <span className="background-black" />
       </div>
