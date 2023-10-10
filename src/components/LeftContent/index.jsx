@@ -1,12 +1,12 @@
-import { StyledLeftContent } from './style'
+import { StyledLeftContent } from "./style"
 import {
   AiFillPlayCircle,
   AiOutlineInstagram,
   AiOutlineLinkedin,
-} from 'react-icons/ai'
-import useScrollPosition from '@/hooks/scroll'
-import useWidthPosition from '@/hooks/useWidth'
-import { useRef } from 'react'
+} from "react-icons/ai"
+import useScrollPosition from "@/hooks/scroll"
+import useWidthPosition from "@/hooks/useWidth"
+import { useRef } from "react"
 
 const LeftContent = ({ scrollRef }) => {
   const scrollPosition = useScrollPosition()
@@ -17,14 +17,14 @@ const LeftContent = ({ scrollRef }) => {
 
     window.scrollTo({
       top: elementPosition,
-      behavior: 'smooth',
+      behavior: "smooth",
     })
   }
 
   return (
     <StyledLeftContent>
       <div className="spacing">
-        <h2>INNOVATION, COFFEE & CODES.</h2>
+        <h2>INNOVATION, COFFE & CODES.</h2>
         <div className="start">
           <span className="line"></span>
           <p>Lets start?</p>
@@ -44,7 +44,7 @@ const LeftContent = ({ scrollRef }) => {
           target="_blank"
           rel="noreferrer"
         >
-          {' '}
+          {" "}
           <AiOutlineInstagram className="icon" />
         </a>
         <a
@@ -52,7 +52,7 @@ const LeftContent = ({ scrollRef }) => {
           target="_blank"
           rel="noreferrer"
         >
-          {' '}
+          {" "}
           <AiOutlineLinkedin className="icon" />
         </a>
       </div>
