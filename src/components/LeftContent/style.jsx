@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledLeftContent = styled.div`
   width: 350px;
@@ -31,7 +31,9 @@ export const StyledLeftContent = styled.div`
   .spacing {
     width: 200px;
     h2 {
-      font-size: 36px;
+      font-family: "Koulen", sans-serif;
+      line-height: 38px;
+      font-size: 40px;
     }
 
     .start {
@@ -42,6 +44,10 @@ export const StyledLeftContent = styled.div`
         display: inline-block;
         width: 50px;
         border-bottom: 1px solid var(--black);
+      }
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
       }
       svg {
         width: 40px;
@@ -88,7 +94,8 @@ export const StyledLeftContent = styled.div`
     .spacing {
       width: 200px;
       h2 {
-        font-size: 36px;
+        line-height: 48px;
+        font-size: 52px;
       }
 
       .start {
@@ -99,6 +106,10 @@ export const StyledLeftContent = styled.div`
           display: inline-block;
           width: 50px;
           border-bottom: 1px solid var(--black);
+        }
+        p {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
         }
         svg {
           width: 40px;

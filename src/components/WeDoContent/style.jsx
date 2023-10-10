@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledWeDoContent = styled.div`
   z-index: 10;
@@ -33,6 +33,14 @@ export const StyledWeDoContent = styled.div`
     }
     .center {
       text-align: center;
+      font-family: "Koulen", sans-serif;
+      h2 {
+        font-size: 24px;
+        color: var(--contact);
+      }
+      h1 {
+        font-size: 32px;
+      }
     }
     .content {
       display: grid;
@@ -47,9 +55,14 @@ export const StyledWeDoContent = styled.div`
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 8px;
         h1 {
+          font-family: "Koulen", sans-serif;
           font-size: 22px;
+        }
+        p {
+          font-family: "Roboto", sans-serif;
+          color: var(--grey2);
         }
         background-color: var(--card);
       }
@@ -72,7 +85,7 @@ export const StyledWeDoContent = styled.div`
           text-align: center;
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          gap: 8px;
 
           .card-img {
             display: flex;
@@ -92,7 +105,7 @@ export const StyledWeDoContent = styled.div`
           background-color: var(--card);
         }
         .card:hover {
-          transform: scale(1);
+          padding: 19px;
           cursor: pointer;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           border: 1px solid var(--grey);
@@ -116,7 +129,7 @@ export const StyledWeDoContent = styled.div`
           text-align: center;
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          gap: 8px;
 
           .card-img {
             display: flex;
@@ -136,7 +149,8 @@ export const StyledWeDoContent = styled.div`
           background-color: var(--card);
         }
         .card:hover {
-          transform: scale(1.05);
+          padding: 19px;
+          transform: scale(0.98);
           cursor: pointer;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           border: 1px solid var(--grey);
@@ -209,7 +223,8 @@ export const StyledWeDoContent = styled.div`
           background-color: var(--card);
         }
         .card:hover {
-          transform: scale(1.05);
+          padding: 19px;
+          transform: scale(0.98);
           cursor: pointer;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           border: 1px solid var(--grey);

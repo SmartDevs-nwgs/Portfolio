@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledAboutUs = styled.div`
   margin: 0;
@@ -12,6 +12,7 @@ export const StyledAboutUs = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 
   .container {
     width: 100%;
@@ -23,13 +24,22 @@ export const StyledAboutUs = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: "Koulen", sans-serif;
+
+      h3 {
+        font-size: 24px;
+        color: var(--contact);
+      }
+      h2 {
+        font-size: 32px;
+      }
     }
     .content {
       width: 100%;
       display: flex;
       justify-content: space-between;
       .smart-devs {
-        width: 50%;
+        width: 200px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -62,10 +72,11 @@ export const StyledAboutUs = styled.div`
           border-bottom-right-radius: 20px;
 
           button {
+            font-family: "Koulen", sans-serif;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 28px;
             border-radius: 8px;
-            padding: 20px 80px 20px 80px;
+            width: 200px;
             background-color: var(--white);
             color: var(--black);
             border: none;
@@ -102,6 +113,10 @@ export const StyledAboutUs = styled.div`
           height: 100%;
           justify-content: space-between;
           text-align: start;
+          h1 {
+            font-family: "Koulen", sans-serif;
+            line-height: 30px;
+          }
           span {
             font-weight: bold;
           }
@@ -257,9 +272,9 @@ export const StyledAboutUs = styled.div`
             border-bottom-left-radius: 0;
             button {
               font-weight: bold;
-              font-size: 24px;
+              font-size: 28px;
               border-radius: 8px;
-              padding: 20px 80px 20px 80px;
+              width: 350px;
               background-color: var(--white);
               color: var(--black);
               border: none;

@@ -1,11 +1,11 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import "./globals.css"
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: 'SmartDevs',
-  description: 'Portfólio SmartDevs',
+  title: "SmartDevs",
+  description: "Portfólio SmartDevs",
 }
 
 export default function RootLayout({ children }) {
@@ -13,10 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <head>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
       </head>

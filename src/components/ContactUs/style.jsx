@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledContactUs = styled.div`
   margin: 0;
@@ -82,6 +82,15 @@ export const StyledContactUs = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: "Koulen", sans-serif;
+
+      h3 {
+        font-size: 24px;
+        color: var(--contact);
+      }
+      h2 {
+        font-size: 32px;
+      }
     }
     .content {
       display: flex;
@@ -99,14 +108,18 @@ export const StyledContactUs = styled.div`
         .message-box {
           display: flex;
           flex-direction: column;
-          gap: 70px;
+          gap: 20px;
           width: 100%;
           text-align: start;
+          h2 {
+            font-family: "Koulen", sans-serif;
+          }
           .names {
             width: 100%;
             display: flex;
             justify-content: space-between;
             input {
+              font-family: "Koulen", sans-serif;
               border-bottom: 1px solid var(--grey);
             }
           }
@@ -116,6 +129,7 @@ export const StyledContactUs = styled.div`
           }
           input,
           textarea {
+            font-family: "Koulen", sans-serif;
             resize: none;
             margin: 0;
             outline: 0;
@@ -124,16 +138,17 @@ export const StyledContactUs = styled.div`
           }
           input::placeholder,
           textarea::placeholder {
-            font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
           }
           button {
+            text-align: center;
+            font-family: "Koulen", sans-serif;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
             border: none;
             width: 80%;
-            padding: 15px;
+            padding: 10px;
             background-color: var(--smart);
             color: var(--white);
             border-radius: 8px;
@@ -146,6 +161,8 @@ export const StyledContactUs = styled.div`
         }
       }
       .info {
+        font-family: "Koulen", sans-serif;
+        letter-spacing: 1.5px;
         color: var(--white);
         display: flex;
         flex-direction: column;
@@ -229,20 +246,20 @@ export const StyledContactUs = styled.div`
           width: 90%;
           height: 300px;
           .message-box {
-            gap: 20px;
+            gap: 10px;
             h2 {
               font-size: 14px;
             }
             button {
+              text-align: center;
               width: 100%;
-              font-size: 14px;
+              font-size: 16px;
               padding: 10px 10px 10px 10px;
             }
             textarea {
               border-bottom: 1px solid var(--card);
             }
             textarea::placeholder {
-              font-weight: bold;
               font-size: 18px;
             }
           }
@@ -320,7 +337,7 @@ export const StyledContactUs = styled.div`
           .message-box {
             display: flex;
             flex-direction: column;
-            gap: 70px;
+            gap: 40px;
             width: 100%;
             text-align: start;
             .names {
@@ -337,6 +354,7 @@ export const StyledContactUs = styled.div`
             }
             input,
             textarea {
+              font-size: 18px;
               resize: none;
               margin: 0;
               outline: 0;
@@ -345,18 +363,18 @@ export const StyledContactUs = styled.div`
             }
             input::placeholder,
             textarea::placeholder {
-              font-weight: bold;
-              font-size: 14px;
+              font-size: 18px;
             }
             textarea {
               border-bottom: 1px solid var(--card);
             }
             textarea::placeholder {
-              font-size: 16px;
+              font-size: 18px;
             }
             button {
+              text-align: center;
               cursor: pointer;
-              font-size: 20px;
+              font-size: 24px;
               font-weight: bold;
               border: none;
               width: 100%;
@@ -374,7 +392,7 @@ export const StyledContactUs = styled.div`
         }
         .info {
           color: var(--white);
-
+          font-weight: 400;
           display: flex;
           flex-direction: column;
           width: 35%;
