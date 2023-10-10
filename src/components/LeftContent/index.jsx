@@ -24,7 +24,7 @@ const LeftContent = ({ scrollRef }) => {
   return (
     <StyledLeftContent>
       <div className="spacing">
-        <h2>INNOVATION, COFFE & CODES.</h2>
+        <h2>INNOVATION, COFFEE & CODES.</h2>
         <div className="start">
           <span className="line"></span>
           <p>Lets start?</p>
