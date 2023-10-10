@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "SmartDevs",
-  description: "Portfólio SmartDevs",
+  description: "Descubra como a SmartDevs transforma ideias em soluções digitais de alto impacto. Explore nosso portfólio de projetos inovadores e conheça nossa paixão por excelência e satisfação do cliente."
 }
 
 export default function RootLayout({ children }) {
