@@ -20,6 +20,18 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KH308S7BWB"
+        ></script>
+        <script>
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KH308S7BWB');`}
+        </script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
